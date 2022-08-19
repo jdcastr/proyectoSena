@@ -1,0 +1,690 @@
+/* Caracteristicas que aplican a todo el documento HTML */
+*
+{
+    font-family: "Comfortaa","cursive","sans-serif";
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+/* Caracteristicas del cuerpo que se presenta */
+body{
+    overflow-x: hidden;
+}
+
+/* SE EMPIEZA A CONFIGURAR LA BARRA DE NAVEGACION DEL LADO IZQUIERDO */
+.container{
+    position: relative;
+    width: 100%;  
+}
+
+.icon img{
+    width: 24px;
+}
+
+/* Se establece la barra de navegacion fija */
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: rgba(100, 100, 100, 0.1);
+    transition: 0.5s;
+    overflow: hidden;
+}
+/* Se agrega javascrip para recortar la barra de navegacion y se agrega estilo */
+.navigation.active{
+    width: 60px;
+    
+}
+
+/* Posicionamiento arriba a la izquiera */
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* adecuacion del objeto al div */
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none; 
+}
+
+/* caracteristicas de cuando se pasa el mouse */
+.navigation ul li a:hover{
+    background: rgba(24, 160, 251, 1);
+    color: bisque;
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 20px;
+}
+/* Se supone que quita el activo del logo de la pagina  */
+.navigation ul li:nth-child(1):hover{
+    background: transparent;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    color: black;
+    border-radius: 2rem;
+}
+
+/* Configuracion para separacion de los elementos */
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+/* Se aumenta el tamaño de los iconos --- los iconos son importados de google */
+.navigation ul li a .icon .material-icons{
+    font-size: 24px;
+}
+
+/* configuracion de las opciones */
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+/* Configuracion barr superior */
+
+.main{
+    align-items: center;
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100hv;
+    
+    transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+.main .topbar{
+    background: rgba(100, 100, 100, 0.1);
+    width: 100%;
+    height: 60px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+/* configuracion del icono de menu */
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    
+    cursor: pointer;
+}
+
+.toggle::before{
+    content: '\e5d2';
+    position: absolute;
+    font-size: 36px;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* configuracion barra dde buscar */
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-left: 50px;
+}
+
+.navigation-top ul{
+    
+    float: left;
+    position: relative;
+    display: flex;
+    font-size: 10px;
+    flex-direction: row;
+}
+
+.navigation-top ul li{
+    padding-left: 5px;
+    list-style: none;
+}
+.navigation-top ul li a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: black;
+    border-radius: 2rem;
+    padding: 10px;
+}
+.navigation-top ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 100%;
+
+    white-space: nowrap;
+}
+
+.navigation-top ul li a:hover{
+    background: rgba(24, 160, 251, 1);
+    color: bisque;
+}
+
+.search label .fa {
+    position: absolute;
+    left: 15px;
+    top: 0px;
+}
+
+
+/* configuracion e la foto */
+
+.usuario{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.usuario img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+}
+
+
+.card{
+    position: relative;
+    background-color: rgba(24, 160, 251, 0.3);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cardBox .card .numbers{
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+
+.cardBox .card:hover{
+    font-size: larger;
+    background-color: rgba(24, 160, 251, 0.7);
+    color: bisque;
+}
+
+.cardBox .card .icon-box i{
+    font-size: 2.5em;
+}
+
+
+/* configuracion de la tabla */
+.information-box{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    max-height: 600px;
+    grid-gap: 20px;
+    padding-top: 0;
+
+}
+
+.information-box .perfil{
+    position: relative;
+    display: grid;
+    grid-template-rows: 10% 45% 35% 10;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 7px;
+    background: rgba(100, 100, 100, 0.1);
+    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.cardHeader h2{
+    font-weight: 700;
+}
+
+.cardHeader .btn{
+    position: relative;
+    padding: 5px 10px;
+    background: rgba(24, 160, 251, 0.7);
+    color: bisque;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.cardHeader .btn:hover{
+    background: rgba(24, 160, 251, 1);
+    color: white;
+    font-size: larger;
+    transition: 0.3s;
+}
+
+.user-photo{
+    position: relative;
+    min-width: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.user-photo img{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info{
+    position: relative;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.user-info h2{
+    letter-spacing: 3px;
+    padding-left: 20px;
+}
+
+.user-info p{
+    padding-left: 20px;
+}
+
+.relevant-info{
+    position: relative;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 7px;
+}
+
+.relevant-info .proxima-cita {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px;
+    text-align: center;
+    border: 2px solid rgba(100, 100, 100, 0.7);
+    border-radius: 6px;
+}
+
+.relevant-info .proxima-cita .btn a{
+    position: relative;
+    padding: 5px 10px;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(24, 160, 251, 0.7);
+    color: bisque;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.relevant-info .proxima-cita .btn a:hover{
+    background: rgba(24, 160, 251, 1);
+    color: white;
+    font-size: larger;
+    transition: 0.3s;
+}
+
+.relevant-info .proxima-cita .titulo{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.relevant-info .proxima-cita .contenido{
+    font-size: 10px;
+}
+
+.relevant-info .ultimo-diagnostico {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    text-align: center;
+    border: 2px solid rgba(100, 100, 100, 0.7);
+    border-radius: 6px;
+}
+
+.relevant-info .ultimo-diagnostico .btn a{
+    position: relative;
+    font-size: smaller;
+    padding: 5px 10px;
+    bottom: 0px;
+    right: 0px;
+    background: rgba(24, 160, 251, 0.7);
+    color: bisque;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.relevant-info .ultimo-diagnostico .btn a:hover{
+    background: rgba(24, 160, 251, 1);
+    color: white;
+    font-size: larger;
+    transition: 0.3s;
+}
+
+.relevant-info .ultimo-diagnostico .titulo{
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.relevant-info .ultimo-diagnostico .contenido{
+    font-size: 10px;
+}
+
+
+
+/* EMERGENCIAS MEDICAS */
+.information-box .emergencias{
+
+    max-height: fit-content;    
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    /* min-height: 530px; */
+    background: rgba(100, 100, 100, 0.1);
+    padding: 20px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+
+}
+
+.information-box .emergencias i{
+    display: block;
+    font-size: 36px;
+    text-align: center;
+}
+
+
+.information-box.emergencias .head {
+    /* position: relative;
+    background: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    top: 40px; */
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+    z-index: 2;
+}
+
+.solicitar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.solicitar .btn{
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+    padding: 5px 10px;
+    background: rgba(24, 160, 251, 0.7);
+    color: bisque;
+    text-decoration: none;
+    border-radius: 6px;
+}
+.solicitar .btn:hover{
+    background: rgba(24, 160, 251, 1);
+    color: white;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.historial-citas{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 20px;
+    padding-top: 0;
+}
+
+.historial-citas .contenido{
+    background: rgba(100, 100, 100, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    box-shadow: 0px 2px 2px grey;
+}
+
+.historial-citas .contenido .numero {
+    align-items: center;
+}
+
+.historial-citas .contenido-segundo{
+    background: rgba(100, 100, 100, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    box-shadow: 0px 2px 2px grey;
+}
+
+.historial-citas .contenido-segundo .numero {
+    align-items: center;
+}
+
+.historial-citas .boton{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.historial-citas .boton a{
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    padding: 5px 10px;
+    background: rgba(24, 160, 251, 0.7);
+    color: bisque;
+    text-decoration: none;
+    border-radius: 6px;
+    
+}
+
+.historial-citas .boton a:hover{
+    background: rgba(24, 160, 251, 1);
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.emergencias2{
+    margin-left: 120px;
+    margin-top: 200px;
+}
+
+
+/* hacerlo responsive */
+ @media(max-width: 992px){
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        left: 0px;
+        width: 300px;
+    }
+    .main{
+        width: 100%;
+        left: 0px;
+    }
+    .main.active{
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+ }
+
+ @media(max-width:768px){
+    .information-box{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(1,1fr);
+    overflow-y: scroll;
+
+    }
+    .cardHeader h2{
+        font-size: 18px;
+    }
+ }
+
+ @media(max-width:480px){
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .information-box .perfil{
+        overflow-x: auto;
+    }
+    .information-box .perfil{
+        width: 600px;
+    }
+    .information-box .emergencias{
+        overflow-x: auto;
+    }
+    .information-box .emergencias {
+        width: 600px;
+    }
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+        background: rgb(100, 100, 100);
+    }
+    .navigation.active{
+        width: 100%;
+        left: 0px;
+        background: rgb(100, 100, 100);
+    }
+    .navigation ul li a{
+        color: white;
+    }
+    .toggle.active{
+        position: fixed;
+        z-index: 10000;
+        right: 0px;
+        left:initial;
+    }
+    .toggle.active::before{
+        color: white;
+    }
+    .main, .main.active{
+        width: 100%;
+        left: 0px;
+    }
+    .navigation-top {
+        position: absolute;
+        top: -100px;
+    }
+ }

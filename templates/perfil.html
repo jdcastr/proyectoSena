@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perfil de usuario</title>
+</head>
+<body>
+
+
+    <div class="container">
+
+        <div class="navigation">
+
+            <ul>
+                <li>
+                    <a href="/perfil">
+                        <span class="icon"><img title="Inicio" src="../static/img/Logo.png" alt=""></span>
+                        <span class="title" title="Inicio"><h2>Clinica Jaller</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard1">
+                        <span class="icon" title="Dashboard"><i class="material-icons" >grid_view</i></span>
+                        <span class="title">Dashboard</span>  
+                    </a>                    
+                </li>
+                <li>
+                    <a href="/perfil">
+                        <span class="icon" title="Perfil"><i class="material-icons" >account_circle</i></span>
+                        <span class="title">Perfil</span>  
+                    </a>                    
+                </li>
+                <li>
+                    <a href="/listado_citas">
+                        <span class="icon" title="Citas"><i class="material-icons">event</i></span>
+                       <span class="title">Citas</span>
+                    </a>               
+                </li>
+                <li>
+                    <a href="#informes">
+                        <span class="icon" title="Informes"><i class="material-icons">description</i></span>
+                        <span class="title">Informes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#herramientas">
+                        <span class="icon" title="Herramientas"><i class="material-icons">plumbing</i></span>
+                        <span class="title">Herramientas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#diagnosticos">
+                        <span class="icon" title="Diagnósticos"><i class="material-icons">medical_services</i></span>
+                        <span class="title">Diagnósticos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#mediccion">
+                        <span class="icon" title="Medicación"><i class="material-icons">medication_liquid</i></span>
+                        <span class="title">Medicación</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#vacunas">
+                        <span class="icon" title="Vacunas"><i class="material-icons">vaccines</i></span>
+                        <span class="title">Vacunas</span>
+                    </a>
+                </li>                
+                <li>
+                    <a href="/logout">
+                        <span class="icon" title="Cerrar Sesión"><i class="material-icons">logout</i></span>
+                        <span class="title">Cerrar sesión</span>
+                    </a>
+                </li>                
+            </ul>
+
+        </div>
+
+        <div class="main">
+
+            <div class="topbar">
+
+                <div class="toggle material-icons" onclick="toggleMenu()" title="Menú"></div>
+                <div class="search">
+                    <label for="">
+                        <a href="/resultados"><input type="text" placeholder="Buscar en esta página."></a>
+                        <i class="material-icons fa">search</i>
+                    </label>
+                </div>
+                <div class="navigation-top">
+                    <ul>
+                        <li>
+                            <a href="/">
+                                <span class="icon"><i class="material-icons">home</i></span>
+                                <span class="title"><h2>Inicio</h2></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#mensajes">
+                                <span class="icon"><i class="material-icons">message</i></span>
+                                <span class="title"><h2>Mensajes</h2></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#alertas">
+                                <span class="icon"><i class="material-icons">notifications</i></span>
+                                <span class="title"><h2>Alertas</h2></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="usuario">
+                    <img src="../static/img/fotoUsuario.jpg" alt="foto del usuario" title="Foto de usuario">
+                </div>
+
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">5</div>
+                        <div class="cardName">Citas asistidas</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="material-icons">event_available</i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">2</div>
+                        <div class="cardName">Citas pendientes</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="material-icons">insert_invitation</i>
+                    </div>
+                </div>
+
+                   
+            </div>
+            <div class="information-box">
+                <div class="perfil">
+                    <div class="cardHeader">
+                        <h2>Perfil de usuario</h2>
+                        <a href="/registrar" class="btn">Editar Perfil</a>
+                    </div>
+                    <div class="user-photo">
+                        <img src="../static/img/fotoPerfil.jpg" alt="">
+                    </div>
+                        <div class="user-info">
+                            <h2>{{ row[0][0] }} {{ row[0][2] }}</h2>
+                            <p>C.c: {{ row[0][3] }}</p>
+                            <p>Ciudad, Colombia</p>
+                        </div>
+                    
+                    <div class="relevant-info">
+                        <div class="proxima-cita">
+                            <div class="titulo">
+                                <span><i class="material-icons">notifications_active</i>
+                                </span>
+                                <h3>Próxima cita</h3>
+                            </div>
+                            <div class="contenido">
+                                <p>{{ row[0][5] }} - Tipo de cita: {{ row[0][6] }}</p>
+                            </div>
+                            <div class="btn">
+                                <a href="/listado_citas">Ver más</a>
+                            </div>
+                        </div>
+                        <div class="ultimo-diagnostico">
+                            <div class="titulo">
+                                <span><i class="material-icons">auto_stories</i>
+                                </span>
+                                <h3>Último Diagnósticos</h3>
+                            </div>
+                            <div class="contenido">
+                                <p>Diagnostico # 6</p>
+                            </div>
+                            <div class="btn">
+                                <a href="#listado-diagnosticos">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <div class="emergencias">
+                    <div class="head">
+                        <div class="cardHeader">
+                            <h2>Emergencias médicas</h2>
+                            <span><i class="material-icons">emergency</i></span>
+                        </div>                       
+                    </div>
+                    <div class="solicitar">
+                        <a href="/emergencias" class="btn">Solicitar</a>
+                    </div>
+               
+                </div> 
+            </div>
+
+            <div class="historial-citas">
+                <div class="titulo">
+                    <h3>Historial de citas</h3>
+                </div>
+                <div class="contenido">
+                    <div class="numero">
+                        <h1>1</h1>
+                    </div>
+                    <div class="info-historial">
+                        <p>Tipo de cita: {{ row[0][6] }}</p>
+                        <p>Médico: Federico Ramos</p>
+                        <p>{{ row[0][5] }}</p>
+                        <p>LUgar de la cita: Calle Xx nº x-xx</p>
+                        <p>Ciudad, Colombia</p>
+                    </div>
+                </div>
+                <div class="contenido-segundo">
+                    <div class="numero">
+                        <h1>2</h1>
+                    </div>
+                    <div class="info-historial">
+                        <p>Tipo de cita: {{ row[0][6] }}</p>
+                        <p>Médico: Gloria Ortiz</p>
+                        <p>{{ row[0][5] }}</p>
+                        <p>LUgar de la cita: Calle Xx nº x-xx</p>
+                        <p>Ciudad, Colombia</p>
+                    </div>
+                </div>
+                <div class="boton">
+                    <div class="historial">
+                        <a href="/listado_citas" class="btn">Ver historial</a>
+                    </div>
+                </div>
+            
+            </div>
+
+            
+        </div>
+        
+
+    </div>
+
+</body>
+</html>
+
+<!-- programar el responsive del navigation -->
+<script>
+    function toggleMenu(){
+        let toggle = document.querySelector(".toggle");
+        let navigation = document.querySelector(".navigation");
+        let main = document.querySelector(".main");
+
+        toggle.classList.toggle("active");
+        navigation.classList.toggle("active");
+        main.classList.toggle("active");
+    }
+</script>
+
+<link rel="stylesheet" href="../static/css/perfil.css">
+
+<!-- Importacion de fuentes a partir de google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600;700&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

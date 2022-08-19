@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNION</title>
+    <link rel="icon" href="/static/img/Logo.png">
+    <link rel="stylesheet" href="../static/css/styles_login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600;700&family=Montserrat:wght@100&display=swap" rel="stylesheet">  
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="header">
+                <img src="../static/img/Logo.png" alt="Logo" title="Inicio" >
+                <p>UNION. Salud Innovadora</p>
+            </div>
+            <div class="top2"></div>
+        </div>
+        
+
+        <div class="main">
+
+            <div class="sesion">
+                <div class="imagen">
+                    <img class="registro-background" src="../static/img/img2.jpg" alt="Imgen Logo" width="350px" height="300px" >
+                </div>
+                <div class="formulario">
+                    <h1 style="text-align: center;">Iniciar sesión</h1>
+                    <form action="/login" method="post"> <!-- Definimos el metodo que va tener el Formulario, en este caso POST -->
+                        <div class="correo">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" name="correo" id="correo">
+                        </div>
+                        <div class="clave">
+                            <label for="clave">Contraseña</label>
+                            <input type="password" name="clave" id="clave">
+                        </div>
+                        <div class="terminos">
+                            <input type="checkbox" name="term" id="term">
+                            <label for="term">Acepto los terminos y condiciones</label>
+                        </div>
+                        <div class="botones">
+                            <input type="submit" value="Iniciar sesión">
+                            <a href="/registrar"><input type="button" value="Registarse"></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="informacion">
+                <p>
+                    Información de contacto: <br>
+                    Teléfono: + 57 XXX XXX XXX <br>
+                    Email: UNION@gmail.com <br>
+                    Dirección: Calle XX <br>
+                    Barranquilla - Colombia
+                </p>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>

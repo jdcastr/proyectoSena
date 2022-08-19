@@ -1,0 +1,175 @@
+*{
+    font-family: "Comfortaa","cursive","sans-serif";
+    margin: 0px;
+    padding: 0px;
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    left: 0px;
+    top: 0px;
+    background: #E5E5E5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    width: 150px;
+    height: 150px;
+    margin-left: 50px;
+    cursor: pointer;
+    border-radius: 100%;
+} 
+
+.header p{
+    padding-right: 50px;
+}
+
+/* .header {
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 381px;
+    height: 365px;
+    left: 10px;
+    top: 10px;
+    
+    border: 1px solid #000000;
+} */
+
+/* .header img {
+    position: absolute;
+    width: 405px;
+    height: 394px;
+    left: 0px;
+    top: 0px;
+    
+    background: url(Logo.png);
+} */
+
+
+.top2{
+    position: absolute;
+    width: 100%;
+    height: 3%;
+    background: #E5E5E5;
+}
+
+
+.informacion {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #E5E5E5;
+    padding: 10px;
+}
+
+.informacion p{
+    position: relative;    
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: small;
+}
+
+.sesion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    
+}
+
+
+
+.sesion .formulario{
+
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2rem;
+    background: rgb(254, 171, 54);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sesion.formulario form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+    width: 500px;
+    height: 330px;
+    
+    font-family: 'Comfortaa', 'cursive';
+}
+
+.correo,.clave{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 500;
+    height: 24px;
+    padding: 30px;
+  }
+  
+  .correo input{
+    width: 300px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .clave input{
+    width: 300px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .botones{
+    float: right;
+    
+    padding: 20px;
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .botones input{
+    padding: 2px;
+    width: 130px;
+    height: 40.94px;
+    left: calc(50% - 130px/2 + 489px);
+    top: calc(50% - 40.94px/2 + 244.47px);
+    background-color: #FFFFFF;
+    border-color:  #18A0FB;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  
+  .botones input:hover{
+    background-color: rgba(24, 160, 251, 0.5) ;
+    color: beige;
+    top: calc(50% - 40.94px/2 + 243px);
+    left: calc(50% - 130px/2 + 489px);
+  }
+  
+  /* Configuracion checkbox */
+  .terminos{  
+    font-size: small;
+    padding: 20px;
+    width: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }

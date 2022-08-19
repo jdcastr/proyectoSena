@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registarse</title>
+    <!-- Importacion de archivo de estilos -->
+    <link rel="stylesheet" href="../static/css/styles_registrar.css">
+    <!-- Importacion de fuentes a partir de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600;700&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Informacion sobre el logo de la clinica -->
+    <div class="header">
+        <img src="../static/img/Logo.png" alt="Logo" >
+        <p>UNION. Tu salud de calidad</p>
+    </div>
+
+    <!-- Barra de navegacion general de la clinica -->
+    <div class="top2">
+        <div class="navbar" id="navbar">
+            <ul >
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/dashboard1">Dashboard</a></li>
+                <li><a href="/">Login</a></li>
+                <li><a href="#about">Sobre nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenido de la pagina web de la clinica -->
+    <div class="middle">
+
+        <!-- Titulo de la pagina -->
+        <div class="title"><h1>Formulario de registro</h1></div>
+
+        <!-- Formulario de registro, cada cosa está dentro de un contenedor para que asi el css sea mas facil de cofigurar -->
+        <div class="content_form">
+            <form action="/registro" method="post"> <!-- Definimos el metodo que va tener el Formulario, en este caso POST -->
+                <!-- Primer y segundo nombre -->
+                <div class="nombres">
+                    <div class="primer-nombre">
+                        <label for="primer-nombre">Primer nombre: </label> <input type="text" placeholder="Escriba su primer nombre" name="primer_nombre" id="primer-nombre" required>
+                    </div>
+        
+                    <div class="segundo-nombre">
+                        <label for="segundo-nombre">Segundo nombre: </label> <input type="text" placeholder="Escriba su segundo nombre" name="segundo_nombre" id="segundo-nombre" required>
+                    </div>
+                </div>
+
+                <!-- primer y segundo apellido -->
+                <div class="apellidos">
+                    <div class="primer-apellido">
+                        <label for="primer-apellidos">Primer apellido: </label> <input type="text" placeholder="Escriba su primer apellido" name="primer_apellido" id="primer-apellido" required>
+                    </div>
+        
+                    <div class="segundo-apellido">
+                        <label for="segundo-apellidos">Segundo apellido: </label> <input type="text" placeholder="Escriba su segundo apellido" name="segundo_apellido" id="segundo-apellido" required>
+                    </div>
+                </div>
+
+                <!-- Genero y fecha de nacimiento -->
+                <div class="informacion-1">
+                    <div class="genero">
+                        Genero: <input type="radio" id="masculino" name="genero" value="1" required><label for="masculino">Masculino</label> 
+                        <input type="radio" id="femenino" name="genero" value="2" required><label for="femenino">Femenino</label>  
+                    </div>
+        
+                    <div class="date">
+                        <label for="nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" name="nacimiento" id="nacimiento" required>
+                    </div>
+                </div>
+
+                <!-- Fijo y celular  -->
+                <div class="informacion-2">
+                    <div class="fijo">
+                        <label for="fijo">Identificación: </label> <input type="text" name="identificacion" id="fijo" required>
+                    </div>
+
+                    <div class="celular">
+                        <label for="celular">Teléfono Celular: </label> <input type="tel" placeholder="(+57)" name="celular" id="celular" required>
+                    </div>
+                </div>
+
+                <!--correo electronico y confirmacion-->
+                <div class="informacion-3">
+                    <div class="email">
+                        <label for="email">Correo electrónico: </label> <input type="text" placeholder="Escriba sus correo electrónico" name="correo" id="email" required>
+                    </div>
+
+                    <div class="confirma-email">
+                        <label for="confirma-email">Confirmar correo: </label> <input type="text" placeholder="Vuelva a escribir su correo electrónico" id="confirma-email" required>
+                    </div>
+                </div>
+
+                <!-- EPS y afiliacion -->
+                <div class="informacion-4">
+                    <div class="eps">
+                        <label for="EPS">Dirección: </label> <input type="" placeholder="Escriba su direccion" name="direccion" id="EPS" required>
+                    </div>
+        
+                    <div class="tipo-afiliado">
+                        <label for="tipo-afiliado">Tipo de usuario: </label> <select name="rol" id="tipo-afiliado" required>
+                            <option value="1">Administrador</option>
+                            <option value="2">Usuario</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- contraseña y confirmacion -->
+                <div class="establecer-clave">
+                    <div class="clave">
+                        <label for="clave">Crea una contraseña: </label> <input type="password" placeholder="Escriba su contraseña" name="contraseña" id="clave" required>
+                    </div>
+        
+                    <div class="confirma-clave">
+                        <label for="confirma-clave">Confirmar contraseña: </label> <input type="password" placeholder="Vuelva a escribir su contraseña" name="confirm_contra" id="confirma-clave" required>
+                    </div>
+                </div>
+
+                <div class="button"><input type="submit" value="Guardar"></div>
+            </form>
+        </div>
+        
+        <div class="informacion">
+            <p>
+                Información de contacto: <br>
+                Teléfono: + 57 XXX XXX XXX <br>
+                Email: UNION@gmail.com <br>
+                Dirección: Calle XX <br>
+                Barranquilla - Colombia
+            </p>
+        </div>
+
+    </div>  
+</body>
+</html>
